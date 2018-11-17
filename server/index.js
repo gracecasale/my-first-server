@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.envPORT || 4000;
+const port = process.env.PORT || 4000;
 
 app.get('/', (request, response) => {
     response.status(200);
@@ -11,7 +11,7 @@ app.get('/hello/:name', (req, res) => {
     const name = req.params.name
     res.status(200);
     res.send(`Hello ${name}`);
-    });
+});
 
 
 app.listen(port, () => {
