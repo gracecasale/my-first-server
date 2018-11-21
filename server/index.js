@@ -30,6 +30,14 @@ app.get('/pizzas', (req, res) => {
     });
 });
 
+app.get('/cookies', (req, res) => {
+    const name = req.params.name
+    res.status(200);
+    res.send({
+        cookies: ['chocolate chip' , 'peanut butter' ,'heath bar']
+    });
+});
+
 app.listen(port, () => {
     console.log(`Now listening on port: ${port}`);
 })
