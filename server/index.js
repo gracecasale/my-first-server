@@ -13,6 +13,22 @@ app.get('/hello/:name', (req, res) => {
     res.send(`Hello ${name}`);
 });
 
+app.get('/pizzas', (req, res) => {
+    const name = req.params.name
+    res.status(200);
+    res.send({
+        pizzas : [
+            {
+                name: 'pepperoni',
+                price: 12.99 
+            },
+            {
+                name: 'hawaiian',
+                price: 15.99
+            }
+        ]
+    });
+});
 
 app.listen(port, () => {
     console.log(`Now listening on port: ${port}`);
