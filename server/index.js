@@ -23,7 +23,7 @@ app.get('/pizzas', (req, res) => {
                 price: 12.99 
             },
             {
-                name: 'hawaiian',
+                name: "hawaiian",
                 price: 15.99
             }
         ]
