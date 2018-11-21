@@ -14,13 +14,12 @@ app.get('/hello/:name', (req, res) => {
 });
 
 app.get('/pizzas', (req, res) => {
-    const name = req.params.name
     res.status(200);
     res.send({
-        pizzas : [
+        pizzas: [
             {
                 name: 'pepperoni',
-                price: 12.99 
+                price: 12.99
             },
             {
                 name: "hawaiian",
@@ -31,10 +30,9 @@ app.get('/pizzas', (req, res) => {
 });
 
 app.get('/cookies', (req, res) => {
-    const name = req.params.name
     res.status(200);
     res.send({
-        cookies: ['chocolate chip' , 'peanut butter' ,'heath bar']
+        cookies: ['chocolate chip', 'peanut butter', 'heath bar']
     });
 });
 
