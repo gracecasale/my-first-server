@@ -1,11 +1,10 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const port = process.env.PORT || 4000;
 
-app.get('/', (request, response) => {
-    response.status(200);
-    response.send('YAYYY!!!!');
-});
+const staticPath = path.resolve(__dirname, '../client/build'); //__dirname makes sure we start with the current file
+app.use(express.static(staticPath));
 
 app.get('/hello/:name', (req, res) => {
     const name = req.params.name
